@@ -1,10 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import bgImage from "../assets/bg.svg";
 import center from "../assets/icon(1).png";
 import left from "../assets/icon(2).png";
 import right from "../assets/icon(3).png";
 import logo from "../assets/logo.png";
+import { BrowserRouter, Switch, Route ,Link} from "react-router-dom";
+
 
 const MainPage = () => {
   return (
@@ -22,7 +23,7 @@ const MainPage = () => {
               <div className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-snug tracking-tight">
                 Get Connected ...
               </div>
-              <div>sfhcsfchvd</div>
+              <div className="opacity-70">Connect to other devices ...</div>
             </div>
           </Link>
           <Link to="/translating">
@@ -33,7 +34,7 @@ const MainPage = () => {
               <div className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-snug tracking-tight">
                 Talk !
               </div>
-              <div>sfhcsfchvd</div>
+              <div className="opacity-70">Use your hands and talk !!</div>
             </div>
           </Link>
           <a
@@ -41,14 +42,14 @@ const MainPage = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <div className="flex-col">
+            <div className="flex-col justify-center items-center">
               <div className="justify-center items-center flex">
                 <img src={right} alt="Mascot" />
               </div>
               <div className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-snug tracking-tight">
                 About EchoSign ...
               </div>
-              <div>sfhcsfchvd</div>
+              <div className="opacity-70">Get to know more about us !</div>
             </div>
           </a>
         </div>
