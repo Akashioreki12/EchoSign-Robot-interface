@@ -14,7 +14,7 @@ const MainPage = () => {
         style={{ backgroundImage: `url(${bgImage})` }}
       >
         <div className="flex flex-row gap-5">
-          <Link to="/connect">
+          <Link to="/connexion">
             <div className="flex-col">
               <div className="justify-center items-center flex">
                 <img src={left} alt="Mascot" />

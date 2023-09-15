@@ -5,7 +5,7 @@ import MainPage from "./pages/mainPage";
 import Translating from "./pages/translating";
 import Translating2 from "./pages/translating2";
 import Eyes from "./pages/eyes";
-import Connectivity from './pages/connect';
+import Connexion from "./pages/connexion";
 
 function App() {
   return (
@@ -26,8 +26,8 @@ function App() {
         <Route path="/">
           <EchoSign />
         </Route>
-        <Route path="/connect">
-          <Connectivity />
+        <Route path="/connexion">
+          <Connexion />
         </Route>
       </Switch>
     </BrowserRouter>
