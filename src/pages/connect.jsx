@@ -5,7 +5,7 @@ import logo from "../assets/logo.png";
 import side from "../assets/rd2.png";
 import sinzee from "../assets/Mascot6.png";
 
-export default class Connectivity extends Component {
+export default class connectivity extends Component {
   render() {
     return (
       <div
@@ -18,6 +18,9 @@ export default class Connectivity extends Component {
           className="w-[10%] h-auto mx-auto fixed top-[7%] right-[6%]"
         />
         <img src={side} className="w-[26%] h-auto mx-auto fixed top-0 left-0" />
+
+        
+        
       </div>
     );
   }

@@ -30,11 +30,11 @@ export default class Translating extends Component {
               <div className="bg-slate-200 w-full h-full p-4">txt</div>
             </div>
           </div>
-          <div className="h-[10%] w-[20%] flex flex-row justify-center items-center gap-6">
+          <div className="h-[10%] w-[20%] flex flex-row justify-center items-center gap-6 rounded-full">
             <div className=" h-[80%] w-[40%] bg-[#5B99FF] justify-center items-center flex ">
               back
             </div>
-            <div className=" h-[80%] w-[40%] bg-[#5B99FF] justify-center items-center flex px-[0%]">
+            <div className=" h-[80%] w-[40%] bg-[#5B99FF] justify-center items-center flex px-[0%] rounded-full">
               audio to sign
             </div>
           </div>

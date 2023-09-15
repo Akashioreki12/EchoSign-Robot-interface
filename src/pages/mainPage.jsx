@@ -14,15 +14,17 @@ const MainPage = () => {
         style={{ backgroundImage: `url(${bgImage})` }}
       >
         <div className="flex flex-row gap-5">
-          <div className="flex-col">
-            <div className="justify-center items-center flex">
-              <img src={left} alt="Mascot" />
+          <Link to="/connect">
+            <div className="flex-col">
+              <div className="justify-center items-center flex">
+                <img src={left} alt="Mascot" />
+              </div>
+              <div className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-snug tracking-tight">
+                Get Connected ...
+              </div>
+              <div>sfhcsfchvd</div>
             </div>
-            <div className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-snug tracking-tight">
-              Get Connected ...
-            </div>
-            <div>sfhcsfchvd</div>
-          </div>
+          </Link>
           <Link to="/translating">
             <div className="flex-col justify-center items-center flex">
               <div className="justify-center items-center flex">
@@ -34,15 +36,21 @@ const MainPage = () => {
               <div>sfhcsfchvd</div>
             </div>
           </Link>
-          <div className="flex-col">
-            <div className="justify-center items-center flex">
-              <img src={right} alt="Mascot" />
+          <a
+            href="https://www.echo-sign.net/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="flex-col">
+              <div className="justify-center items-center flex">
+                <img src={right} alt="Mascot" />
+              </div>
+              <div className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-snug tracking-tight">
+                About EchoSign ...
+              </div>
+              <div>sfhcsfchvd</div>
             </div>
-            <div className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-snug tracking-tight">
-              About EchoSign ...
-            </div>
-            <div>sfhcsfchvd</div>
-          </div>
+          </a>
         </div>
         <img
           src={logo}

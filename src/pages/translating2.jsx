@@ -31,11 +31,11 @@ export default class Translating2 extends Component {
             </div>
           </div>
           <div className="h-[10%] w-[20%] flex flex-row justify-center items-center gap-6">
-            <div className=" h-[80%] w-[40%] bg-[#5B99FF] justify-center items-center flex ">
+            <div className=" h-[80%] w-[40%] bg-[#5B99FF] justify-center items-center flex rounded-xl ">
               back
             </div>
-            <div className=" h-[80%] w-[40%] bg-[#5B99FF] justify-center items-center flex px-[0%]">
-              sign to audio ? 
+            <div className=" h-[80%] w-[40%] bg-[#5B99FF] justify-center items-center flex px-[0%] rounded-xl ">
+              sign to audio ?
             </div>
           </div>
         </div>
