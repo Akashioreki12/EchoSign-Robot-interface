@@ -2,10 +2,11 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import EchoSign from "./pages/echosign"; 
 import MainPage from "./pages/mainPage";
+import Connexion from "./pages/connexion";
 import Translating from "./pages/translating";
 import Translating2 from "./pages/translating2";
 import Eyes from "./pages/eyes";
-import Connexion from "./pages/connexion";
+
 
 // import TranscribeComponent from "./pages/textspeech";
 
@@ -15,6 +16,9 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
+        <Route path="/connexion">
+          <Connexion />
+        </Route>
         <Route path="/translating">
           <Translating />
         </Route>
@@ -28,9 +32,6 @@ function App() {
           <Eyes />
         </Route>
         
-        <Route path="/connexion">
-          <Connexion />
-        </Route>
         <Route path="/stt">
           <Stt />
         </Route>
