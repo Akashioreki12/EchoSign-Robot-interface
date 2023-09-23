@@ -7,6 +7,10 @@ import Translating2 from "./pages/translating2";
 import Eyes from "./pages/eyes";
 import Connexion from "./pages/connexion";
 
+// import TranscribeComponent from "./pages/textspeech";
+
+import Stt from "./pages/textspeech";
+
 function App() {
   return (
     <BrowserRouter>
@@ -23,11 +27,15 @@ function App() {
         <Route path="/eyes">
           <Eyes />
         </Route>
-        <Route path="/">
-          <EchoSign />
-        </Route>
+        
         <Route path="/connexion">
           <Connexion />
+        </Route>
+        <Route path="/stt">
+          <Stt />
+        </Route>
+        <Route path="/">
+          <EchoSign />
         </Route>
       </Switch>
     </BrowserRouter>

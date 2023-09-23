@@ -1,11 +1,25 @@
-import React, { Component } from "react";
+import React, { Component ,useState} from "react";
 import { Link } from "react-router-dom";
 import bgImage from "../assets/bg.svg";
 import logo from "../assets/logo.png";
 import side from "../assets/bl1.png";
 import sinzee from "../assets/Mascot6.png";
+import VideoFeed from "../components/VideoFeed";
+import Stt from "./textspeech";
 
 export default class Translating extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showOriginalContent: true, // Initially show the original content
+    };
+  }
+
+  toggleContent = () => {
+    this.setState((prevState) => ({
+      showOriginalContent: !prevState.showOriginalContent,
+    }));
+  };
   render() {
     return (
       <div
@@ -23,20 +37,22 @@ export default class Translating extends Component {
           <div className=" flex justify-center items-center h-[10%] w-[20%] text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-snug tracking-tight">
             Sign to audio
           </div>
+          
           <div className="h-[70%] w-[55%] flex flex-row justify-center items-center gap-4 ">
-            <div className="bg-slate-200 h-[100%] w-[60%]">camera</div>
-            <div className=" h-[100%] w-[40%] flex flex-col justify-center items-center  gap-5">
-              <div className="bg-slate-200 w-full h-full p-4">audio </div>
-              <div className="bg-slate-200 w-full h-full p-4">txt</div>
-            </div>
+          {this.state.showOriginalContent ? (
+              <VideoFeed />
+            ) : (
+              <Stt />
+            )}
           </div>
           <div className="h-[10%] w-[20%] flex flex-row justify-center items-center gap-6 rounded-full">
             <div className=" h-[80%] w-[40%] bg-[#5B99FF] justify-center items-center flex ">
               back
             </div>
+            <button onClick={this.toggleContent}>
             <div className=" h-[80%] w-[40%] bg-[#5B99FF] justify-center items-center flex px-[0%] rounded-full">
               audio to sign
-            </div>
+            </div></button>
           </div>
         </div>
       </div>
