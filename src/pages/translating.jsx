@@ -35,32 +35,25 @@ export default class Translating extends Component {
 
         <div className="flex flex-col justify-center items-center gap-5 w-full h-full">
           <div className=" flex justify-center items-center h-[10%] w-[20%] text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-snug tracking-tight">
-          {this.state.showOriginalContent ? (
+         
               <div>sign Recognition</div>
-            ) : (
-              <div>Audio to sign</div>
-            )}
+            
           </div>
           
           <div className="h-[70%] w-[55%] flex flex-row justify-center items-center gap-4 ">
-          {this.state.showOriginalContent ? (
+      
               <VideoFeed />
-            ) : (
-              <Stt />
-            )}
+            
           </div>
           <div className="h-[10%] w-[20%] flex flex-row justify-center items-center gap-6 rounded-full">
           <Link to="/mainPage" className=" h-[80%] w-[40%] bg-[#5B99FF] justify-center items-center flex rounded-xl ">
             <div className=" h-[80%] w-[40%] bg-[#5B99FF] justify-center items-center flex rounded-xl ">
               back
             </div></Link>
-            <button onClick={this.toggleContent} className=" h-[80%] w-[40%] bg-[#5B99FF] justify-center items-center flex rounded-xl ">
-            {this.state.showOriginalContent ? (
+            <Link to="/translating2" className=" h-[80%] w-[40%] bg-[#5B99FF] justify-center items-center flex rounded-xl ">
               <div>Audio to sign</div>
-              
-            ) : (
-              <div>sign Recognition</div>
-            )}</button>
+              </Link>
+         
           </div>
         </div>
       </div>
