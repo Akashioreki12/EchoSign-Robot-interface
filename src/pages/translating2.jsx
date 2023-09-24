@@ -21,7 +21,7 @@ export default class Translating2 extends Component {
 
         <div className="flex flex-col justify-center items-center gap-5 w-full h-full">
           <div className=" flex justify-center items-center h-[10%] w-[20%] text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-snug tracking-tight">
-            audio to sign
+            audio to 
           </div>
           <div className="h-[70%] w-[55%] flex flex-row justify-center items-center gap-4 ">
             <div className="bg-slate-200 h-[100%] w-[60%]">Recording </div>
