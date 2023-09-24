@@ -11,46 +11,60 @@ import { faMicrophone } from '@fortawesome/free-solid-svg-icons';
 export default function Stt ()  {
   const [isRecording, setIsRecording] = useState(false);
   const [transcribedText, setTranscribedText] = useState('');
-  const [signLanguageImage, setSignLanguageImage] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [responseIndex, setResponseIndex] = useState(0);
+  const responses = ['Salam', 'Labas hamdollah, o nta', 'Hta ana chokran echosign'];
 
   const startRecording = () => {
-    // Implement code to start recording audio
+    // Start recording logic
     setIsRecording(true);
   };
 
   const stopRecording = () => {
-    // Implement code to stop recording audio
+    // Stop recording logic
     setIsRecording(false);
+
+    // Simulate a loading delay before showing the response
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      setTranscribedText(responses[responseIndex]);
+      setResponseIndex((prevIndex) => (prevIndex + 1) % responses.length);
+    }, 3000); // Wait for 3 seconds
   };
 
-  const handleTranscription = (text) => {
-    // Handle the transcribed text here
-    setTranscribedText(text);
-  };
-
-  const handleSignLanguageImage = (image) => {
-    // Handle the sign language interpretation image here
-    setSignLanguageImage(image);
-  };
 
   return (
-    <div className="speech-to-text-container">
-      <div className="record-button">
-        {isRecording ? (
-          <button onClick={stopRecording}>Stop Recording</button>
-        ) : (
-          <button onClick={startRecording}>
-            <FontAwesomeIcon icon={faMicrophone} /> Start Recording
-          </button>
-        )}
-      </div>
-      <div className="transcribed-text">
-        <p>{transcribedText}</p>
-      </div>
-      <div className="sign-language-image">
-        {signLanguageImage && <img src={signLanguageImage} alt="Sign Language Interpretation" />}
-      </div>
+    <div className="text-center space-y-8 ">
+    <div className="mt-12">
+      {isRecording ? (
+        <button onClick={stopRecording} className="bg-red-500 text-white px-6 py-4 rounded-full">
+          <span className="text-4xl p-2">
+            <FontAwesomeIcon icon={faMicrophone} />
+          </span>
+          Stop Recording
+        </button>
+      ) : (
+        <button onClick={startRecording} className="bg-blue-500 text-white px-6 py-4 rounded-full">
+          <span className="text-4xl p-2">
+            <FontAwesomeIcon icon={faMicrophone} />
+          </span>
+          Start Recording
+        </button>
+      )}
     </div>
+    {loading ? (
+      <div className="animate-spin rounded-full h-20 w-20 border-t-4 border-blue-500 border-solid mx-auto"></div>
+    ) : (
+      
+      <div className="mt-12 justify-center items-center gap-6 rounded-full">
+        <div className="mt-12 bg-[#5B99FF] justify-center items-center flex rounded-xl font-semibold  text-2xl text-white">
+              Translation :
+            </div>
+        <p className="mt-12 font-bold text-6xl">{transcribedText}</p>
+      </div>
+    )}
+  </div>
   );
 }
 

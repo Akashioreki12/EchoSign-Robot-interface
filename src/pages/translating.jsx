@@ -46,11 +46,12 @@ export default class Translating extends Component {
             )}
           </div>
           <div className="h-[10%] w-[20%] flex flex-row justify-center items-center gap-6 rounded-full">
-            <div className=" h-[80%] w-[40%] bg-[#5B99FF] justify-center items-center flex ">
+          <Link to="/mainPage" className=" h-[80%] w-[40%] bg-[#5B99FF] justify-center items-center flex rounded-xl ">
+            <div className=" h-[80%] w-[40%] bg-[#5B99FF] justify-center items-center flex rounded-xl ">
               back
-            </div>
+            </div></Link>
             <button onClick={this.toggleContent}>
-            <div className=" h-[80%] w-[40%] bg-[#5B99FF] justify-center items-center flex px-[0%] rounded-full">
+            <div className=" h-[80%] w-[40%] bg-[#5B99FF] justify-center items-center flex rounded-xl ">
               audio to sign
             </div></button>
           </div>
