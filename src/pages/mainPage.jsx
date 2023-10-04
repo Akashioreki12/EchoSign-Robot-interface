@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import bgImage from "../assets/bg.svg";
 import center from "../assets/icon(1).png";
 import left from "../assets/icon(2).png";
 import right from "../assets/icon(3).png";
 import logo from "../assets/logo.png";
-import { BrowserRouter, Switch, Route ,Link} from "react-router-dom";
-
+import out from "../assets/0090.png";
+import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 
 const MainPage = () => {
   return (
@@ -58,6 +58,13 @@ const MainPage = () => {
           alt="Logo"
           className="fixed w-[15%] h-auto mx-auto top-8"
         />
+        <Link to="/">
+          <img
+            src={out}
+            alt="Logo"
+            className="fixed w-[3%] h-auto mx-auto top-8 right-20"
+          />
+        </Link>
       </div>
     </div>
   );
