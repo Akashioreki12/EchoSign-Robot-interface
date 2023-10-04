@@ -51,7 +51,7 @@ export default class Translating extends Component {
               back
             </div></Link>
             <Link to="/translating" className=" h-[80%] w-[40%] bg-[#5B99FF] justify-center items-center flex rounded-xl ">
-              <div>sign Recognition</div>
+              <div>Sign Recognition</div>
             </Link>
           </div>
         </div>
