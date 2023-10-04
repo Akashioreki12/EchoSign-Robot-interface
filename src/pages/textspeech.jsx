@@ -38,7 +38,7 @@ export default function Stt() {
 
   // Use useEffect to update responseIndex and transcribedText
   useEffect(() => {
-    if (responseIndex !== -1) {
+    if (responseIndex !== -2) {
       localStorage.setItem("responseIndex", responseIndex);
       setTranscribedText(responses[responseIndex]);
     }
