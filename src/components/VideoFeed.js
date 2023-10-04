@@ -52,8 +52,9 @@ function reconnect() {
 
   return (
     <div>
-      <h1>Real-Time Video Feed</h1>
-      <img ref={videoRef} alt="Real-Time Feed" />
+      {videoRef.current ? (<img ref={videoRef} alt="Real-Time Feed" />):(
+        <div className="animate-spin rounded-full h-20 w-20 border-t-4 border-blue-500 border-solid mx-auto"></div>)}
+      
     </div>
   );
 };
