@@ -34,8 +34,9 @@ export default class Translating extends Component {
         <img src={side} className="w-[26%] h-auto mx-auto fixed top-0 left-0" />
 
         <div className="flex flex-col justify-center items-center gap-5 w-full h-full">
-          <div className=" flex justify-center items-center h-[10%] w-[20%] text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-snug tracking-tight">
-         
+
+          <div className=" flex justify-center items-center h-[10%] w-[30%] text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-snug tracking-tight">
+
               <div>sign Recognition</div>
             
           </div>
